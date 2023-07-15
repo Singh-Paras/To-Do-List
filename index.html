@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>To-Do-List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo">
+            <h1>To-Do List<img id="list-img" src="images/check-list.png" alt=""></h1>
+            <hr>
+            <hr>
+            <div class="add-item">
+                <input type="text" name="" id="input-box" placeholder="Enter Task">
+                <button onclick="add()">Add</button>
+            </div>
+            <ul id="List">
+            </ul>
+            <button id="clear" onclick="clear()">clear all</button>
+            <audio id="clear-sound" src="sounds/whoosh.mp3"></audio>
+            <audio id="insert" src="sounds/click.mp3"></audio>
+            <audio id="error" src="sounds/error.mp3"></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

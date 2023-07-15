@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgb(55, 138, 0) 0%,
+    rgba(8, 233, 8, 0.736) 14%,
+    rgb(1, 25, 37) 14%,
+    #059cbb 100%
+  );
+  padding: 15px;
+}
+
+.todo {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(59, 52, 52, 0.399);
+  box-shadow: 0 8px 32px 0 rgba(69, 61, 61, 0);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 100px auto 20px;
+  padding: 40px 30px 7px;
+  border-radius: 30px;
+}
+
+.todo h1 {
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo h1 img {
+  width: 50px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.add-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding-left: 10px;
+  border-radius: 1rem;
+  margin-bottom: 55px;
+  margin-top: 55px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 1rem;
+  font-weight: 1.2rem;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.add-item button {
+  width: 20%;
+  height: 3.2rem;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(85, 149, 27) 0.1%,
+    rgb(183, 219, 87) 90%
+  );
+  color: black;
+  font-weight: 700;
+  border: none;
+  border-radius: inherit;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.2rem;
+  transition: 0.04s;
+}
+
+.add-item button:hover {
+  transform: scale(1.06);
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  font-size: 17px;
+  padding: 10px 8px 10px 50px;
+  background-color: rgb(255, 249, 249);
+  margin: 9px;
+  border-radius: 3rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: "Varela Round", sans-serif;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-image: url(images/unchecked-31-256.png);
+  background-size: cover;
+  background-position: center;
+  top: 6px;
+  left: 8px;
+}
+
+ul li.checked {
+  background-color: rgb(204, 246, 156);
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/pngwing.com.png);
+}
+
+ul li i {
+  position: absolute;
+  right: 1rem;
+}
+
+ul li i:hover {
+  color: rgb(255, 0, 0);
+}
+
+#clear {
+  font-size: 1rem;
+  padding: 5px 15px;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  margin: 2rem 13rem;
+  color: white;
+  background-color: rgb(159, 61, 61);
+  border: 1px solid rgb(187, 97, 97);
+}
+
+@media only screen and (max-width: 500px) {
+
+  #clear {
+    padding: 7px 5px;
+    border-radius: 10px;
+    width: 35%;
+    margin: 2rem 7rem;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    background:  #008aa5dd;
+    padding: 15px;
+  }
+}
