@@ -20,6 +20,7 @@ function add() {
     li.appendChild(icon);
   }
   inputBox.value = "";
+  saveData();
 }
 
 list.addEventListener(
@@ -29,10 +30,12 @@ list.addEventListener(
       e.target.classList.toggle("checked");
       var insert = document.getElementById("insert");
       insert.play();
+      saveData();
     } else if (e.target.tagName === "I") {
       e.target.parentElement.remove();
       var audio = document.getElementById("clear-sound");
       audio.play();
+      saveData();
     }
   },
   false
@@ -51,3 +54,15 @@ clear_button.addEventListener("click", function (e) {
   var audio = document.getElementById("clear-sound");
   audio.play();
 });
+
+
+function saveData()
+{
+  localStorage.setItem("data",list.innerHTML);
+}
+
+function getData()
+{
+  list.innerHTML=localStorage.getItem("data");
+}
+getData();
